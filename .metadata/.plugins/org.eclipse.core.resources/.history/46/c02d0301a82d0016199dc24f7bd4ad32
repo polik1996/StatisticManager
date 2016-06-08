@@ -1,11 +1,9 @@
 package model;
 
-public interface DataBaseModel {
-
+public class DataBaseModel {
 	String[] getTableHeaders();
 	Object[] getTableRowData();
 	int getObjectId();
 	void setObjectId(int id);
 	void updateWith(Object mask);
-	
 }
