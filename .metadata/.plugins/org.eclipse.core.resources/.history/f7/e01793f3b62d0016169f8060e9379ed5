@@ -6,11 +6,5 @@
 		<class>model.Group</class>
 		<class>model.Player</class>
 		<class>model.Team</class>
-		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/UEFA_2016" />
-			<property name="javax.persistence.jdbc.user" value="postgres" />
-			<property name="javax.persistence.jdbc.password" value="83polik83" />
-			<property name="javax.persistence.jdbc.createDatabaseIfNotExist" value="true" />
-		</properties>
 	</persistence-unit>
 </persistence>

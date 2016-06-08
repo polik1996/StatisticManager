@@ -45,6 +45,7 @@ public class JPAController {
 	}
 	
 	public void operateObject(DataBaseModel obj, int mode){
+		
 	}
 	
 }

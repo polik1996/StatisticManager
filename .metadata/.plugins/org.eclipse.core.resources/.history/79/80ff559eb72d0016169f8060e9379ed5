@@ -45,6 +45,29 @@ public class JPAController {
 	}
 	
 	public void operateObject(DataBaseModel obj, int mode){
+		Class<? extends DataBaseModel> clazz = obj.getClass();
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+		try {
+			
+			if(mode == DataBaseDialog.ADD && !ifExist(clazz, obj))
+				em.persist(obj);	
+			else if(mode == DataBaseDialog.UPDATE){
+				DataBaseModel updObj = (DataBaseModel) em.find(clazz, obj.getObjectId());
+				updObj.updateWith(obj);	
+			}
+			else if(mode == DataBaseDialog.DELETE){
+				int id = obj.getObjectId();
+				Object delObj = em.find(clazz, id);
+				em.remove(delObj);
+			}
+			em.getTransaction().commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			em.getTransaction().rollback();
+		} finally {
+			em.close();
+		}
 	}
 	
 }

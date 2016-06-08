@@ -36,15 +36,11 @@ public class JPAController {
 	}
 	
 	public boolean ifExist(Class<? extends DataBaseModel> clazz, DataBaseModel obj){
-		List<? extends DataBaseModel> list = getObjectList(clazz);
-		if (list != null && list.size() != 0)
-			for (Object current : list)
-				if (current.equals(obj))
-					return true;
 		return false;
 	}
 	
 	public void operateObject(DataBaseModel obj, int mode){
+		
 	}
 	
 }
