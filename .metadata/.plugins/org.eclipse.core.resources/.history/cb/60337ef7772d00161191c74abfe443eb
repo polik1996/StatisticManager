@@ -1,0 +1,13 @@
+package view;
+
+import controller.JpaController;
+
+public interface DataBaseDialog {
+
+	public final int ADD = 1;
+	public final int UPDATE = 2;
+	public final int DELETE = 3;
+	Object getObject();
+	void openWithMode(int mode, JpaController controller);
+	
+}

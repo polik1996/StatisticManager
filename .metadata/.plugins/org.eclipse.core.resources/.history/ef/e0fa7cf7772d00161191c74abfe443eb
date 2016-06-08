@@ -1,0 +1,225 @@
+package view;
+
+import java.awt.EventQueue;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JScrollPane;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.JRadioButton;
+import javax.swing.JButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JTable;
+
+import model.Club;
+import model.DataBaseModel;
+import model.Division;
+import model.Player;
+import model.Team;
+import controller.*;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.lang.reflect.InvocationTargetException;
+
+public class UserInterface extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private JTable table;
+	public JpaController controller = new JpaController();
+	private Class< ? extends DataBaseModel> clazs;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					UserInterface frame = new UserInterface();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	public UserInterface() {
+		setTitle("Data base work");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 338);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		JPanel panel = new JPanel();
+		
+		JScrollPane scrollPane = new JScrollPane();
+		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		gl_contentPane.setHorizontalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGap(4)
+					.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 278, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
+					.addContainerGap())
+		);
+		gl_contentPane.setVerticalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
+				.addComponent(panel, GroupLayout.PREFERRED_SIZE, 289, Short.MAX_VALUE)
+		);
+		
+		table = new JTable();
+		scrollPane.setViewportView(table);
+		
+		JLabel LabelTable = new JLabel("Table");
+		LabelTable.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JRadioButton ClubRadioButton = new JRadioButton("Club");
+		ClubRadioButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				clazs = Club.class;
+				table.setModel(controller.getTableModel(clazs));
+			}
+		});
+		buttonGroup.add(ClubRadioButton);
+		
+		JRadioButton DivisionRadioButton = new JRadioButton("Division");
+		DivisionRadioButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				clazs = Division.class;
+				table.setModel(controller.getTableModel(clazs));
+			}
+		});
+		buttonGroup.add(DivisionRadioButton);
+		
+		JRadioButton PlayerRadioButton = new JRadioButton("Player");
+		PlayerRadioButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				clazs = Player.class;
+				table.setModel(controller.getTableModel(clazs));
+			}
+		});
+		buttonGroup.add(PlayerRadioButton);
+		
+		JRadioButton TeamRadioButton = new JRadioButton("Team");
+		TeamRadioButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				clazs = Team.class;
+				table.setModel(controller.getTableModel(clazs));
+			}
+		});
+		buttonGroup.add(TeamRadioButton);
+		
+		JLabel LabelOperations = new JLabel("Operations");
+		LabelOperations.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JButton ButtonAdd = new JButton("ADD");
+		ButtonAdd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				activateDialog(clazs, DataBaseDialog.ADD);
+			}
+		});
+		
+		JButton ButtonUpdate = new JButton("UPDATE");
+		ButtonUpdate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				activateDialog(clazs, DataBaseDialog.UPDATE);
+			}
+		});
+		
+		JButton ButtonDelete = new JButton("DELETE");
+		ButtonDelete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				activateDialog(clazs, DataBaseDialog.DELETE);
+			}
+		});
+		GroupLayout gl_panel = new GroupLayout(panel);
+		gl_panel.setHorizontalGroup(
+			gl_panel.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING)
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(DivisionRadioButton, GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+							.addContainerGap())
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(ClubRadioButton, GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+							.addGap(4))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(PlayerRadioButton, GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+							.addGap(4))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(TeamRadioButton, GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+							.addGap(14))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+								.addComponent(LabelTable, GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+								.addComponent(LabelOperations, GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+								.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING, false)
+									.addComponent(ButtonUpdate, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+									.addComponent(ButtonDelete, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+									.addComponent(ButtonAdd, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)))
+							.addContainerGap())))
+		);
+		gl_panel.setVerticalGroup(
+			gl_panel.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(LabelTable)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(ClubRadioButton)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(DivisionRadioButton)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(PlayerRadioButton)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(TeamRadioButton)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(LabelOperations)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(ButtonAdd)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(ButtonUpdate)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(ButtonDelete)
+					.addContainerGap(67, Short.MAX_VALUE))
+		);
+		panel.setLayout(gl_panel);
+		contentPane.setLayout(gl_contentPane);
+	}
+	
+	protected void activateDialog(Class<? extends DataBaseModel> clazs, int mode){
+		if(clazs == null){
+			return;
+		}
+		try {
+			DataBaseDialog dlg = (DataBaseDialog) clazs.getMethod("getDialog").invoke(null);
+			((JDialog) dlg).setLocation(contentPane.getX() + contentPane.getWidth(), contentPane.getY());
+			dlg.openWithMode(mode, controller);
+			DataBaseModel obj = (DataBaseModel) dlg.getObject();
+			if(obj == null){
+				return;
+			}
+			controller.operateObject(obj, mode);
+			table.setModel(controller.getTableModel(clazs));
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			e.printStackTrace();
+		}
+	}
+}

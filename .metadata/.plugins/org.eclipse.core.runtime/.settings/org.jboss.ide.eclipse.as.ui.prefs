@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+org.jboss.ide.eclipse.as.ui.defaultWebServer=WildFly 10.0 (Experimental)1465235393796
 org.jboss.ide.eclipse.as.ui.preferences.disabled.automatic.server.view=true
 org.jboss.ide.eclipse.as.ui.preferences.enabledDecorators.1=true
 org.jboss.ide.eclipse.as.ui.preferences.runtime.last.type.org.jboss.ide.eclipse.as.runtime.wildfly.100=D\:\\laby VI semestr\\application programming\\wildfly-10.0.0.Final
