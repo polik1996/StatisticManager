@@ -896,3 +896,12 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.ui 2 2 2016-06-09 13:18:51.235
 !MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.usage, page: org.jboss.tools.usage.analytics.preferences.UsageAnalyticsPreferencePage)
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-09 13:26:41.045
+!MESSAGE The server's configuration file does not exist: D:\laby VI semestr\application programming\wildfly-10.0.0.Final\standalone\configuration\standalone.xml
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-09 13:27:25.002
+!MESSAGE The server's configuration file does not exist: D:\laby VI semestr\application programming\wildfly-10.0.0.Final\standalone\configuration\standalone.xml
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-09 13:27:34.038
+!MESSAGE The server's configuration file does not exist: D:\laby VI semestr\application programming\wildfly-10.0.0.Final\standalone\configuration\standalone.xml

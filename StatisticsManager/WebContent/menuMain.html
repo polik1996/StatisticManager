@@ -2,20 +2,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+   <style>
+   body { 
+    margin: 10px; /* Убираем отступы */
+   }
+  </style>
 </head>
 <body>
-<centre>
+<center-right>
 <form action="SelectTable" target="forTable" name=".SelectTable"
 			method="POST">
-<table>
+<table style ="width:50%">
 <tr>
-<td><input type="radio" name="tableName" value="Команда">Команда</td>
-<td><input type="radio" name="tableName" value="Гравець">Гравець</td>
-<td><input type="radio" name="tableName" value="Матч">Матч</td>
-<td><input type="radio" name="tableName" value="Група">Група</td>
+<td><input type="radio" class="active"  name="tableName" value="Команда">Команда</td>
+<td><input type="radio" class="active"  name="tableName" value="Гравець">Гравець</td>
+<td><input type="radio" class="active"  name="tableName" value="Матч">Матч</td>
+<td><input type="radio" class="active"  name="tableName" value="Група">Група</td>
 </tr>
 </table>
 </form>
-</centre>
+</center-right>
 </body>
 </html>
