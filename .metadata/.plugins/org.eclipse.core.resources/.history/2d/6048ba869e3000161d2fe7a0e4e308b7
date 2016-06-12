@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<head> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+   <style>
+   body{
+    background-color: #e6e6e6; /* Цвет фона веб-страницы */
+   } 
+   </style>
+
+</head>
+</head>
+<body>
+	<center>
+		<h3><p> Система футбольної аналітики</p></h3>
+		<p><img src="euro.PNG" width="1205" height="100" alt = "euro 2016" ></p>
+		<iframe name="forMenu" src="menuTable.html" width="210" height="400" align = top></iframe>
+		<iframe name="forTable" src="menuMain.html" width="990" height="400"> </iframe>
+		<br>
+		<iframe name="forOperation" src="generalTable.html"  width="1205" height="300"> </iframe>
+	</center>
+</body>
+</html>

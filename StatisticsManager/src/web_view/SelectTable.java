@@ -30,19 +30,30 @@ public class SelectTable extends HttpServlet {
     }
     
     public static JPAController getController(){
+    	if(controller == null){
+    		controller = new JPAController();
+    	}
     	return controller;
     }
     
     public static TableModel getTableModel(){
-    	return null;
+    	Class tableClass = null;
+    	try{
+    		tableClass = Class.forName(tableName);
+    	}catch(ClassNotFoundException e){
+    		e.printStackTrace();
+    	}
+    	return getController().getTableModel(tableClass);
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		tableName = "model." + request.getParameter("tableName");
+		request.setAttribute("model", getTableModel());
+		request.setAttribute("tableName", tableName);
+		request.getRequestDispatcher("showTable.jsp").forward(request, response);
 	}
 
 	/**

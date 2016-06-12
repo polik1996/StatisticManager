@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<head> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+ <style>	
+  </style>
+</head>
+</head>
+<body>
+<center-left>
+		<form action="SelectTable" target="forTable" name=".SelectTable"
+			method="POST">
+			<table width="80">
+				<p>
+				<tr>
+					<td align="left"><input button class="btn btn-info" type="submit" style="width:200Px" name="tableName"
+						value="Групи"></td>
+				</tr>
+				<tr>
+					<td align="left"><input button class="btn btn-info" type="submit" style="width:200Px" name="tableName"
+						value="Пошук інф. про команди"></td>
+				<tr>
+					<td align="left"><input button class="btn btn-info" type="submit" style="width:200Px" name="tableName"
+						value="Пошук інф. про гравців"></td>
+				</tr>
+				<tr>
+					<td align="left"><input button class="btn btn-info" type="submit" style="width:200Px" name="tableName"
+						value="Завантажити таблицю"></td>
+				</tr>
+				<tr>
+					<td align="left"><input button class="btn btn-info" type="submit"  style="width:200Px" name="tableName"
+						value="Подати дані"></td>
+				</tr>
+				<tr>
+					<td align="left"><input button class="btn btn-info" type="submit" style="width:200Px" name="tableName"
+						value="Видалити дані"></td>
+				</tr>
+				<tr>
+					<td align="left"><input button class="btn btn-info" type="submit" style="width:200Px" name="tableName"
+						value="Змінити данні"></td>
+				</tr>
+				</p>
+			</table>
+		</form>
+		<br>
+</center-left>
+</body>
+</html>
