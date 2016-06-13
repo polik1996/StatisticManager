@@ -12,7 +12,7 @@ import model.DataBaseModel;
 
 public class JPAController {
 	
-	EntityManagerFactory emf = Persistence.createEntityManagerFactory("StatisticsManager");
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("SupportProject");
 	
 	public java.util.List<? extends DataBaseModel> getObjectList(Class<? extends DataBaseModel> clazz){
 		EntityManager em = emf.createEntityManager();

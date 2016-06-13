@@ -1167,3 +1167,851 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-12 15:40:32.301
 !MESSAGE Unable to retrieve a list of remote deployment scanners
+!SESSION 2016-06-13 21:26:42.511 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data D:\laby VI semestr\practics\StatisticManager -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-06-13 21:26:45.518
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-06-13 21:27:10.112
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Юрий Полевик'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2016-06-13 21:27:12.737
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.common.jdt.debug.ui, page: org.jboss.tools.common.jdt.debug.ui.preferences.RemoteDebugPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2016-06-13 21:27:12.872
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.runtime.ui, page: org.jboss.tools.runtime.preferences.RuntimePreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2016-06-13 21:27:12.933
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.usage, page: org.jboss.tools.usage.analytics.preferences.UsageAnalyticsPreferencePage)
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-13 21:27:56.173
+!MESSAGE The server "WildFly 10.0 (Experimental)" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_77 
+
+!ENTRY org.eclipse.ltk.core.refactoring 4 10000 2016-06-13 21:31:00.475
+!MESSAGE Internal Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.core.resource.xml.EBaseObjectImpl.getDeletionOffset(EBaseObjectImpl.java:325)
+	at org.eclipse.jpt.common.core.resource.xml.EBaseObjectImpl.createDeleteEdit(EBaseObjectImpl.java:311)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericClassRef.createDeleteEdit(GenericClassRef.java:328)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericClassRef.createDeleteTypeEdits(GenericClassRef.java:323)
+	at org.eclipse.jpt.jpa.core.context.DeleteTypeRefactoringParticipant$DeleteTypeEditsTransformer.transform(DeleteTypeRefactoringParticipant.java:34)
+	at org.eclipse.jpt.jpa.core.context.DeleteTypeRefactoringParticipant$DeleteTypeEditsTransformer.transform(DeleteTypeRefactoringParticipant.java:1)
+	at org.eclipse.jpt.common.utility.internal.iterator.TransformationIterator.next(TransformationIterator.java:54)
+	at org.eclipse.jpt.common.utility.internal.iterator.TransformationIterator.next(TransformationIterator.java:54)
+	at org.eclipse.jpt.common.utility.internal.iterator.CompositeIterator.loadCurrentIterator(CompositeIterator.java:88)
+	at org.eclipse.jpt.common.utility.internal.iterator.CompositeIterator.hasNext(CompositeIterator.java:51)
+	at org.eclipse.jpt.common.utility.internal.iterator.CompositeIterator.loadCurrentIterator(CompositeIterator.java:87)
+	at org.eclipse.jpt.common.utility.internal.iterator.CompositeIterator.hasNext(CompositeIterator.java:51)
+	at org.eclipse.jpt.common.utility.internal.iterator.CompositeIterator.loadCurrentIterator(CompositeIterator.java:87)
+	at org.eclipse.jpt.common.utility.internal.iterator.CompositeIterator.hasNext(CompositeIterator.java:51)
+	at org.eclipse.jpt.common.utility.internal.iterator.IteratorTools.isEmpty(IteratorTools.java:500)
+	at org.eclipse.jpt.common.utility.internal.iterable.IterableTools.isEmpty(IterableTools.java:311)
+	at org.eclipse.jpt.jpa.core.internal.refactoring.AbstractJpaDeleteTypeParticipant.createDeleteEdits(AbstractJpaDeleteTypeParticipant.java:191)
+	at org.eclipse.jpt.jpa.core.internal.refactoring.AbstractJpaDeleteTypeParticipant.checkConditions(AbstractJpaDeleteTypeParticipant.java:116)
+	at org.eclipse.ltk.core.refactoring.participants.ProcessorBasedRefactoring.checkFinalConditions(ProcessorBasedRefactoring.java:257)
+	at org.eclipse.ltk.core.refactoring.CheckConditionsOperation.run(CheckConditionsOperation.java:85)
+	at org.eclipse.ltk.core.refactoring.CreateChangeOperation.run(CreateChangeOperation.java:121)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:31:48.034
+!MESSAGE Error creating PostgreSQL JDBC Connection Factory connection to New PostgreSQL. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:166)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:31:48.692
+!MESSAGE Error creating SQL Model Connection connection to New PostgreSQL. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.datatools.connectivity 4 -1 2016-06-13 21:31:48.737
+!MESSAGE Could not connect to New PostgreSQL.
+!SUBENTRY 1 org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:31:48.737
+!MESSAGE Error creating SQL Model Connection connection to New PostgreSQL. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:31:48.738
+!MESSAGE Error creating PostgreSQL JDBC Connection Factory connection to New PostgreSQL. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:166)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui 4 0 2016-06-13 21:31:48.743
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.RuntimeException: Error creating SQL Model Connection connection to New PostgreSQL. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.checkStatus(DTPConnectionProfileWrapper.java:293)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.checkStatus(DTPConnectionProfileWrapper.java:290)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.connect(DTPConnectionProfileWrapper.java:207)
+	at org.eclipse.jpt.jpa.ui.internal.properties.JpaProjectPropertiesPage.openConnectionProfile(JpaProjectPropertiesPage.java:785)
+	at org.eclipse.jpt.jpa.ui.internal.properties.JpaProjectPropertiesPage$ConnectLinkListener.widgetSelected(JpaProjectPropertiesPage.java:774)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
+	at org.eclipse.swt.widgets.Widget.sendSelectionEvent(Widget.java:1154)
+	at org.eclipse.swt.widgets.Link.wmNotifyChild(Link.java:1094)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5704)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1956)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5256)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4732)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5063)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Link.callWindowProc(Link.java:172)
+	at org.eclipse.swt.widgets.Widget.wmLButtonUp(Widget.java:2131)
+	at org.eclipse.swt.widgets.Control.WM_LBUTTONUP(Control.java:5069)
+	at org.eclipse.swt.widgets.Link.WM_LBUTTONUP(Link.java:930)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4713)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5063)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:827)
+	at org.eclipse.jface.window.Window.open(Window.java:803)
+	at org.eclipse.jpt.jpa.ui.internal.wizards.DatabaseSchemaWizardPage$DatabaseGroup.promptToConfigJpaProjectConnection(DatabaseSchemaWizardPage.java:402)
+	at org.eclipse.jpt.jpa.ui.internal.wizards.DatabaseSchemaWizardPage$DatabaseGroup$3.widgetSelected(DatabaseSchemaWizardPage.java:382)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
+	at org.eclipse.swt.widgets.Widget.sendSelectionEvent(Widget.java:1154)
+	at org.eclipse.swt.widgets.Link.wmNotifyChild(Link.java:1094)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5704)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1956)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5256)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4732)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5063)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Link.callWindowProc(Link.java:172)
+	at org.eclipse.swt.widgets.Widget.wmLButtonUp(Widget.java:2131)
+	at org.eclipse.swt.widgets.Control.WM_LBUTTONUP(Control.java:5069)
+	at org.eclipse.swt.widgets.Link.WM_LBUTTONUP(Link.java:930)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4713)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5063)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:827)
+	at org.eclipse.jface.window.Window.open(Window.java:803)
+	at org.eclipse.jpt.jpa.eclipselink.ui.internal.ddlgen.EclipseLinkDDLGeneratorUi.generate(EclipseLinkDDLGeneratorUi.java:59)
+	at org.eclipse.jpt.jpa.eclipselink.ui.internal.ddlgen.wizards.EclipseLinkDDLGeneratorUi2_0.generate(EclipseLinkDDLGeneratorUi2_0.java:24)
+	at org.eclipse.jpt.jpa.eclipselink.ui.internal.platform.EclipseLinkJpaPlatformUi2_0.generateDDL(EclipseLinkJpaPlatformUi2_0.java:31)
+	at org.eclipse.jpt.jpa.ui.internal.handlers.GenerateDDLHandler.generateDDL(GenerateDDLHandler.java:45)
+	at org.eclipse.jpt.jpa.ui.internal.handlers.GenerateDDLHandler.execute(GenerateDDLHandler.java:37)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:295)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:252)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:234)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:493)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:486)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:799)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.handleWidgetSelection(HandledContributionItem.java:675)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.access$7(HandledContributionItem.java:659)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem$4.handleEvent(HandledContributionItem.java:592)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jpt.jpa.core 4 0 2016-06-13 21:34:30.336
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.core.resource.xml.EBaseObjectImpl.getTextNode(EBaseObjectImpl.java:167)
+	at org.eclipse.jpt.jpa.core.resource.persistence.XmlJavaClassRef.getJavaClassTextRange(XmlJavaClassRef.java:240)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericClassRef.getXmlValidationTextRange(GenericClassRef.java:456)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericClassRef.getValidationTextRange(GenericClassRef.java:451)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericClassRef.validate(GenericClassRef.java:386)
+	at org.eclipse.jpt.jpa.core.internal.context.persistence.AbstractPersistenceUnit.validateClassRefs(AbstractPersistenceUnit.java:2403)
+	at org.eclipse.jpt.jpa.core.internal.context.persistence.AbstractPersistenceUnit.validate(AbstractPersistenceUnit.java:2285)
+	at org.eclipse.jpt.jpa.eclipselink.core.context.persistence.EclipseLinkPersistenceUnit.validate(EclipseLinkPersistenceUnit.java:629)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericPersistence.validatePersistenceUnit(GenericPersistence.java:347)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericPersistence.validate(GenericPersistence.java:303)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericPersistenceXml.validate(GenericPersistenceXml.java:243)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.GenericContextRoot.validate(GenericContextRoot.java:248)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.validate(AbstractJpaProject.java:1459)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.getValidationMessages(AbstractJpaProject.java:1447)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.buildValidationMessages_(InternalJpaProjectManager.java:584)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager$BuildValidationMessagesCommand.execute(InternalJpaProjectManager.java:572)
+	at org.eclipse.jpt.common.core.internal.utility.command.CommandJobCommandAdapter.execute(CommandJobCommandAdapter.java:50)
+	at org.eclipse.jpt.common.core.internal.utility.command.JobCommandJob.run(JobCommandJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:34:44.310
+!MESSAGE Error creating PostgreSQL JDBC Connection Factory connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:166)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:34:44.333
+!MESSAGE Error creating SQL Model Connection connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.datatools.connectivity 4 -1 2016-06-13 21:34:44.389
+!MESSAGE Could not connect to MyConection.
+!SUBENTRY 1 org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:34:44.389
+!MESSAGE Error creating SQL Model Connection connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:34:44.397
+!MESSAGE Error creating PostgreSQL JDBC Connection Factory connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:166)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 2 2016-06-13 21:34:44.504
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.RuntimeException: Error creating SQL Model Connection connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.checkStatus(DTPConnectionProfileWrapper.java:293)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.checkStatus(DTPConnectionProfileWrapper.java:290)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.connect(DTPConnectionProfileWrapper.java:207)
+	at org.eclipse.jpt.jpa.eclipselink.core.internal.ddlgen.EclipseLinkAbstractDDLGenerator.reconnect(EclipseLinkAbstractDDLGenerator.java:179)
+	at org.eclipse.jpt.jpa.eclipselink.core.internal.ddlgen.EclipseLinkAbstractDDLGenerator.postGenerate(EclipseLinkAbstractDDLGenerator.java:113)
+	at org.eclipse.jpt.common.core.internal.gen.AbstractJptGenerator.generationFailed(AbstractJptGenerator.java:172)
+	at org.eclipse.jpt.common.core.internal.gen.AbstractJptGenerator$1.launchesTerminated(AbstractJptGenerator.java:187)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:318)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:270)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1059)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:406)
+	at org.eclipse.debug.core.Launch.handleDebugEvents(Launch.java:578)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	... 1 more
+
+!ENTRY org.eclipse.debug.core 4 120 2016-06-13 21:34:44.512
+!MESSAGE An exception occurred during launch change notification.
+!STACK 0
+java.lang.RuntimeException: Error creating SQL Model Connection connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.checkStatus(DTPConnectionProfileWrapper.java:293)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.checkStatus(DTPConnectionProfileWrapper.java:290)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.connect(DTPConnectionProfileWrapper.java:207)
+	at org.eclipse.jpt.jpa.eclipselink.core.internal.ddlgen.EclipseLinkAbstractDDLGenerator.reconnect(EclipseLinkAbstractDDLGenerator.java:179)
+	at org.eclipse.jpt.jpa.eclipselink.core.internal.ddlgen.EclipseLinkAbstractDDLGenerator.postGenerate(EclipseLinkAbstractDDLGenerator.java:113)
+	at org.eclipse.jpt.common.core.internal.gen.AbstractJptGenerator.generationFailed(AbstractJptGenerator.java:172)
+	at org.eclipse.jpt.common.core.internal.gen.AbstractJptGenerator$1.launchesTerminated(AbstractJptGenerator.java:187)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:318)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:270)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1059)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:406)
+	at org.eclipse.debug.core.Launch.handleDebugEvents(Launch.java:578)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1161)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1197)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:441)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	... 1 more
+
+!ENTRY org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:36:26.031
+!MESSAGE Error creating SQL Model Connection connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:36:26.044
+!MESSAGE Error creating PostgreSQL JDBC Connection Factory connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:166)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.datatools.connectivity 4 -1 2016-06-13 21:36:26.078
+!MESSAGE Could not connect to MyConection.
+!SUBENTRY 1 org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:36:26.078
+!MESSAGE Error creating SQL Model Connection connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:36:26.078
+!MESSAGE Error creating PostgreSQL JDBC Connection Factory connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:166)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jpt.jpa.ui 4 0 2016-06-13 21:36:26.084
+!MESSAGE Error creating SQL Model Connection connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+java.lang.RuntimeException: Error creating SQL Model Connection connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.checkStatus(DTPConnectionProfileWrapper.java:293)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.checkStatus(DTPConnectionProfileWrapper.java:290)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.connect(DTPConnectionProfileWrapper.java:207)
+	at org.eclipse.jpt.jpa.ui.internal.wizards.gen.DatabaseGroup$1$1.run(DatabaseGroup.java:346)
+Caused by: org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jpt.jpa.core 4 0 2016-06-13 21:37:34.449
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.core.resource.xml.EBaseObjectImpl.getTextNode(EBaseObjectImpl.java:167)
+	at org.eclipse.jpt.jpa.core.resource.persistence.XmlJavaClassRef.getJavaClassTextRange(XmlJavaClassRef.java:240)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericClassRef.getXmlValidationTextRange(GenericClassRef.java:456)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericClassRef.getValidationTextRange(GenericClassRef.java:451)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericClassRef.validate(GenericClassRef.java:386)
+	at org.eclipse.jpt.jpa.core.internal.context.persistence.AbstractPersistenceUnit.validateClassRefs(AbstractPersistenceUnit.java:2403)
+	at org.eclipse.jpt.jpa.core.internal.context.persistence.AbstractPersistenceUnit.validate(AbstractPersistenceUnit.java:2285)
+	at org.eclipse.jpt.jpa.eclipselink.core.context.persistence.EclipseLinkPersistenceUnit.validate(EclipseLinkPersistenceUnit.java:629)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericPersistence.validatePersistenceUnit(GenericPersistence.java:347)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericPersistence.validate(GenericPersistence.java:303)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericPersistenceXml.validate(GenericPersistenceXml.java:243)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.GenericContextRoot.validate(GenericContextRoot.java:248)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.validate(AbstractJpaProject.java:1459)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.getValidationMessages(AbstractJpaProject.java:1447)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.buildValidationMessages_(InternalJpaProjectManager.java:584)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager$BuildValidationMessagesCommand.execute(InternalJpaProjectManager.java:572)
+	at org.eclipse.jpt.common.core.internal.utility.command.CommandJobCommandAdapter.execute(CommandJobCommandAdapter.java:50)
+	at org.eclipse.jpt.common.core.internal.utility.command.JobCommandJob.run(JobCommandJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:38:16.723
+!MESSAGE Error creating PostgreSQL JDBC Connection Factory connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:166)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:38:16.735
+!MESSAGE Error creating SQL Model Connection connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.datatools.connectivity 4 -1 2016-06-13 21:38:16.777
+!MESSAGE Could not connect to MyConection.
+!SUBENTRY 1 org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:38:16.777
+!MESSAGE Error creating SQL Model Connection connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.datatools.connectivity 2 -1 2016-06-13 21:38:16.777
+!MESSAGE Error creating PostgreSQL JDBC Connection Factory connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:166)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jpt.jpa.ui 4 0 2016-06-13 21:38:16.783
+!MESSAGE Error creating SQL Model Connection connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+!STACK 0
+java.lang.RuntimeException: Error creating SQL Model Connection connection to MyConection. (Error: Сервер запросил парольную аутентификацию, но пароль не был указан.)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.checkStatus(DTPConnectionProfileWrapper.java:293)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.checkStatus(DTPConnectionProfileWrapper.java:290)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileWrapper.connect(DTPConnectionProfileWrapper.java:207)
+	at org.eclipse.jpt.jpa.ui.internal.wizards.gen.DatabaseGroup$1$1.run(DatabaseGroup.java:346)
+Caused by: org.postgresql.util.PSQLException: Сервер запросил парольную аутентификацию, но пароль не был указан.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:473)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:65)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:159)
+	at org.postgresql.Driver.makeConnection(Driver.java:415)
+	at org.postgresql.Driver.connect(Driver.java:283)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.createConnection(PostgreSQLJDBCConnection.java:87)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.internalCreateConnection(DriverConnectionBase.java:105)
+	at org.eclipse.datatools.connectivity.DriverConnectionBase.open(DriverConnectionBase.java:54)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLJDBCConnection.<init>(PostgreSQLJDBCConnection.java:47)
+	at org.eclipse.datatools.enablement.internal.postgresql.PostgreSQLConnectionFactory.createConnection(PostgreSQLConnectionFactory.java:51)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryProvider.createConnection(ConnectionFactoryProvider.java:83)
+	at org.eclipse.datatools.connectivity.internal.ConnectionProfile.createConnection(ConnectionProfile.java:359)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.initializeJDBCConnection(ConnectionInfoImpl.java:705)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionInfoImpl.<init>(ConnectionInfoImpl.java:690)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:38)
+	at org.eclipse.datatools.connectivity.sqm.core.SQMConnectionFactory.createConnection(SQMConnectionFactory.java:45)
+	at org.eclipse.datatools.connectivity.sqm.internal.core.connection.ConnectionFactory.createConnection(ConnectionFactory.java:59)
+	at org.eclipse.datatools.connectivity.internal.ConnectionFactoryAdapterProvider.createConnection(ConnectionFactoryAdapterProvider.java:114)
+	at org.eclipse.datatools.connectivity.internal.ManagedConnection.createConnection(ManagedConnection.java:163)
+	at org.eclipse.datatools.connectivity.internal.CreateConnectionJob.run(CreateConnectionJob.java:56)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ltk.core.refactoring 4 10000 2016-06-13 21:45:55.908
+!MESSAGE Internal Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.core.resource.xml.EBaseObjectImpl.getDeletionOffset(EBaseObjectImpl.java:325)
+	at org.eclipse.jpt.common.core.resource.xml.EBaseObjectImpl.createDeleteEdit(EBaseObjectImpl.java:311)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericClassRef.createDeleteEdit(GenericClassRef.java:328)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.context.persistence.GenericClassRef.createDeleteTypeEdits(GenericClassRef.java:323)
+	at org.eclipse.jpt.jpa.core.context.DeleteTypeRefactoringParticipant$DeleteTypeEditsTransformer.transform(DeleteTypeRefactoringParticipant.java:34)
+	at org.eclipse.jpt.jpa.core.context.DeleteTypeRefactoringParticipant$DeleteTypeEditsTransformer.transform(DeleteTypeRefactoringParticipant.java:1)
+	at org.eclipse.jpt.common.utility.internal.iterator.TransformationIterator.next(TransformationIterator.java:54)
+	at org.eclipse.jpt.common.utility.internal.iterator.TransformationIterator.next(TransformationIterator.java:54)
+	at org.eclipse.jpt.common.utility.internal.iterator.CompositeIterator.loadCurrentIterator(CompositeIterator.java:88)
+	at org.eclipse.jpt.common.utility.internal.iterator.CompositeIterator.hasNext(CompositeIterator.java:51)
+	at org.eclipse.jpt.common.utility.internal.iterator.CompositeIterator.loadCurrentIterator(CompositeIterator.java:87)
+	at org.eclipse.jpt.common.utility.internal.iterator.CompositeIterator.hasNext(CompositeIterator.java:51)
+	at org.eclipse.jpt.common.utility.internal.iterator.CompositeIterator.loadCurrentIterator(CompositeIterator.java:87)
+	at org.eclipse.jpt.common.utility.internal.iterator.CompositeIterator.hasNext(CompositeIterator.java:51)
+	at org.eclipse.jpt.common.utility.internal.iterator.IteratorTools.isEmpty(IteratorTools.java:500)
+	at org.eclipse.jpt.common.utility.internal.iterable.IterableTools.isEmpty(IterableTools.java:311)
+	at org.eclipse.jpt.jpa.core.internal.refactoring.AbstractJpaDeleteTypeParticipant.createDeleteEdits(AbstractJpaDeleteTypeParticipant.java:191)
+	at org.eclipse.jpt.jpa.core.internal.refactoring.AbstractJpaDeleteTypeParticipant.checkConditions(AbstractJpaDeleteTypeParticipant.java:116)
+	at org.eclipse.ltk.core.refactoring.participants.ProcessorBasedRefactoring.checkFinalConditions(ProcessorBasedRefactoring.java:257)
+	at org.eclipse.ltk.core.refactoring.CheckConditionsOperation.run(CheckConditionsOperation.java:85)
+	at org.eclipse.ltk.core.refactoring.CreateChangeOperation.run(CreateChangeOperation.java:121)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SESSION 2016-06-13 22:50:38.463 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-06-13 22:51:15.834
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Юрий Полевик'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2016-06-13 22:51:16.076
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.common.jdt.debug.ui, page: org.jboss.tools.common.jdt.debug.ui.preferences.RemoteDebugPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2016-06-13 22:51:16.176
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.runtime.ui, page: org.jboss.tools.runtime.preferences.RuntimePreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2016-06-13 22:51:16.182
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.usage, page: org.jboss.tools.usage.analytics.preferences.UsageAnalyticsPreferencePage)
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-13 22:52:05.732
+!MESSAGE The server "WildFly 10.0 (Experimental)" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_77 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-13 23:05:43.010
+!MESSAGE The server "WildFly 10.0 (Experimental)" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_77 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-13 23:06:08.031
+!MESSAGE Unable to retrieve a list of remote deployment scanners
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-13 23:06:08.076
+!MESSAGE Unable to retrieve a list of remote deployment scanners

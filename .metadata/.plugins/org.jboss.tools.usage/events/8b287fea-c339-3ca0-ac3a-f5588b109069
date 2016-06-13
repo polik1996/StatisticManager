@@ -1,0 +1,11 @@
+#Mon Jun 13 21:34:41 EEST 2016
+vl=How many times the 'Finish' button pressed during the day
+l=Wizard class name
+ct=jbt
+d=1465842881289
+c=0
+cmp=usage
+a=finishWizard
+cl=org.eclipse.jpt.jpa.eclipselink.ui.internal.ddlgen.wizards.EclipseLinkGenerateDDLWizard2_0
+v=2.1.0
+s=1

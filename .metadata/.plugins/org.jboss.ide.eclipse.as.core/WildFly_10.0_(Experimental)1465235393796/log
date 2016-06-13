@@ -60,3 +60,47 @@
 
 !ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-12 15:40:15.459
 !MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-13 21:27:56.161
+!MESSAGE The server "WildFly 10.0 (Experimental)" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_77 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-13 21:27:57.548
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-13 21:28:06.187
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-06-13 21:28:06.373
+!MESSAGE Module StatisticsManager on WildFly 10.0 (Experimental) not yet fully deployed. Waiting...
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-13 22:52:05.718
+!MESSAGE The server "WildFly 10.0 (Experimental)" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_77 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-13 22:52:07.088
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-06-13 22:52:18.334
+!MESSAGE Module StatisticsManager on WildFly 10.0 (Experimental) not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-13 22:52:18.411
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-06-13 22:54:23.955
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-13 23:05:43.002
+!MESSAGE The server "WildFly 10.0 (Experimental)" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_77 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-13 23:05:44.050
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-13 23:05:55.898
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-06-13 23:05:55.971
+!MESSAGE Module StatisticsManager on WildFly 10.0 (Experimental) not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-06-13 23:06:16.367
+!MESSAGE Module StatisticsManager on WildFly 10.0 (Experimental) still not ready to be shown in browser. Aborting delay.
