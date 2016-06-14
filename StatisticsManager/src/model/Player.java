@@ -12,7 +12,7 @@ import java.util.Date;
 @Entity
 @Table(name="\"Player\"")
 @NamedQuery(name="Player.findAll", query="SELECT p FROM Player p")
-public class Player implements Serializable {
+public class Player implements Serializable, DataBaseModel {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -122,6 +122,42 @@ public class Player implements Serializable {
 
 	public void setTeam(Team team) {
 		this.team = team;
+	}
+
+	@Override
+	public String[] getTableHeaders() {
+		return new String[]{"id", "Ім'я", "Збірна", "Дата народження", "Матчів", "Голи",
+				"Асисти", "Хвилин на полі", "Позиція", "Ірговий номер"};
+	}
+
+	@Override
+	public Object[] getTableRowData() {
+		return new Object[]{id, name, team.getName(), age, matches, goals,
+				asists, minutes, position, number};
+	}
+
+	@Override
+	public int getObjectId() {
+		return id;
+	}
+
+	@Override
+	public void setObjectId(int id) {
+		setId(id);
+	}
+
+	@Override
+	public void updateWith(Object mask) {
+		Player obj = (Player)mask;
+		name = obj.getName();
+		team = obj.getTeam();
+		age = obj.getAge();
+		matches = obj.getMatches();
+		goals = obj.getGoals();
+		asists = obj.getAsists();
+		minutes = obj.getMinutes();
+		position = obj.getPosition();
+		number = obj.getNumber();
 	}
 
 }

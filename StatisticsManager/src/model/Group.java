@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 @Table(name="\"Group\"")
 @NamedQuery(name="Group.findAll", query="SELECT g FROM Group g")
-public class Group implements Serializable {
+public class Group implements Serializable, DataBaseModel {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -116,6 +116,37 @@ public class Group implements Serializable {
 		team.setGroup(null);
 
 		return team;
+	}
+
+	@Override
+	public String[] getTableHeaders() {
+		return new String[]{"id", "Назва", "Команда 1", "Команда 2", "Команда 3", "Команда 4"};
+	}
+
+	@Override
+	public Object[] getTableRowData() {
+		return new Object[]{id, name, team1Bean.getName(), team2Bean.getName(), 
+				team3Bean.getName(), team4Bean.getName()};
+	}
+
+	@Override
+	public int getObjectId() {
+		return id;
+	}
+
+	@Override
+	public void setObjectId(int id) {
+		setId(id);
+	}
+
+	@Override
+	public void updateWith(Object mask) {
+		Group obj = (Group)mask;
+		name = obj.getName();
+		team1Bean = obj.getTeam1Bean();
+		team2Bean = obj.getTeam2Bean();
+		team3Bean = obj.getTeam3Bean();
+		team4Bean = obj.getTeam4Bean();
 	}
 
 }

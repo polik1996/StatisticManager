@@ -104,3 +104,89 @@
 
 !ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-06-13 23:06:16.367
 !MESSAGE Module StatisticsManager on WildFly 10.0 (Experimental) still not ready to be shown in browser. Aborting delay.
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-14 10:36:02.027
+!MESSAGE The server "WildFly 10.0 (Experimental)" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_77 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-14 10:36:05.690
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-06-14 10:36:23.881
+!MESSAGE Module StatisticsManager on WildFly 10.0 (Experimental) not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-14 10:36:23.896
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-14 11:01:29.488
+!MESSAGE The server "WildFly 10.0 (Experimental)" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_77 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-14 11:01:30.819
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-14 11:01:37.992
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-06-14 11:01:38.023
+!MESSAGE Module StatisticsManager on WildFly 10.0 (Experimental) not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-14 11:24:57.579
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-06-14 11:24:58.222
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-14 11:24:58.304
+!MESSAGE The server "WildFly 10.0 (Experimental)" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_77 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-14 11:24:59.377
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-14 11:25:07.518
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-14 12:15:17.969
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-06-14 12:15:18.645
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-14 12:15:18.675
+!MESSAGE The server "WildFly 10.0 (Experimental)" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_77 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-14 12:15:19.748
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-14 12:15:29.577
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-14 12:22:49.712
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-06-14 12:22:50.217
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-14 12:22:50.243
+!MESSAGE The server "WildFly 10.0 (Experimental)" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_77 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-14 12:22:51.303
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-14 12:22:59.344
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-14 14:01:16.257
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-14 14:01:16.621
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-06-14 14:01:16.713
+!MESSAGE The server "WildFly 10.0 (Experimental)" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_77 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-14 14:01:18.040
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-14 14:01:27.969
+!MESSAGE Server Startup Succeeded

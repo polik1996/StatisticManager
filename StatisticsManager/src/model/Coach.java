@@ -13,7 +13,7 @@ import java.util.List;
 @Entity
 @Table(name="\"Coach\"")
 @NamedQuery(name="Coach.findAll", query="SELECT c FROM Coach c")
-public class Coach implements Serializable {
+public class Coach implements Serializable, DataBaseModel {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -108,6 +108,36 @@ public class Coach implements Serializable {
 		team.setCoach(null);
 
 		return team;
+	}
+
+	@Override
+	public String[] getTableHeaders() {
+		return new String[]{"Ім'я", "Національність", "Дата народження", "Тактика 1", "Тактика 2", "id"};
+	}
+
+	@Override
+	public Object[] getTableRowData() {
+		return new Object[]{name, nationality, age, tactics1, tactics2, id};
+	}
+
+	@Override
+	public int getObjectId() {
+		return id;
+	}
+
+	@Override
+	public void setObjectId(int id) {
+		setId(id);
+	}
+
+	@Override
+	public void updateWith(Object mask) {
+		Coach obj = (Coach)mask;
+		name = obj.getName();
+		nationality = obj.getNationality();
+		age = obj.getAge();
+		tactics1 = obj.getTactics1();
+		tactics2 = obj.getTactics2();
 	}
 
 }

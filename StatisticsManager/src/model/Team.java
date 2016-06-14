@@ -2,6 +2,9 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.sun.mail.handlers.text_html;
+
 import java.util.List;
 
 
@@ -12,7 +15,7 @@ import java.util.List;
 @Entity
 @Table(name="\"Team\"")
 @NamedQuery(name="Team.findAll", query="SELECT t FROM Team t")
-public class Team implements Serializable {
+public class Team implements Serializable, DataBaseModel {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -333,6 +336,42 @@ public class Team implements Serializable {
 
 	public void setGroup(Group group) {
 		this.group = group;
+	}
+
+	@Override
+	public String[] getTableHeaders() {
+		return new String[]{"id", "Рейтинг FIFA", "Тренер", "Група", "Матчів",
+				"Очки", "Ім'я", "Забито", "Прoпущено", "Різниця"};
+	}
+
+	@Override
+	public Object[] getTableRowData() {
+		return new Object[]{id, statusFifa, coach.getName(), group.getName(),
+				matches, points, name, scored, missing, difference};
+	}
+
+	@Override
+	public int getObjectId() {
+		return id;
+	}
+
+	@Override
+	public void setObjectId(int id) {
+		setId(id);
+	}
+
+	@Override
+	public void updateWith(Object mask) {
+		Team obj = (Team)mask;
+		statusFifa = obj.getStatusFifa();
+		coach = obj.getCoach();
+		group = obj.getGroup();
+		matches = obj.getMatches();
+		points = obj.getPoints();
+		name = obj.getName();
+		scored = obj.getScored();
+		missing = obj.getMissing();
+		difference = obj.getDifference();
 	}
 
 }

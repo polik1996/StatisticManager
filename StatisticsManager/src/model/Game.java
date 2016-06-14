@@ -12,7 +12,7 @@ import java.util.Date;
 @Entity
 @Table(name="\"Game\"")
 @NamedQuery(name="Game.findAll", query="SELECT g FROM Game g")
-public class Game implements Serializable {
+public class Game implements Serializable, DataBaseModel {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -88,6 +88,36 @@ public class Game implements Serializable {
 
 	public void setTeam3(Team team3) {
 		this.team3 = team3;
+	}
+
+	@Override
+	public String[] getTableHeaders() {
+		return new String[]{"id", "Команда 1", "Команда 2", "Рахунок", "Дата проведення"};
+	}
+
+	@Override
+	public Object[] getTableRowData() {
+		return new Object[]{id, team1Bean.getName(), team2Bean.getName(),
+				score, date};
+	}
+
+	@Override
+	public int getObjectId() {
+		return id;
+	}
+
+	@Override
+	public void setObjectId(int id) {
+		setId(id);
+	}
+
+	@Override
+	public void updateWith(Object mask) {
+		Game obj = (Game)mask;
+		team1Bean = obj.getTeam1Bean();
+		team2Bean = obj.getTeam2Bean();
+		score = obj.getScore();
+		date = obj.getDate();
 	}
 
 }

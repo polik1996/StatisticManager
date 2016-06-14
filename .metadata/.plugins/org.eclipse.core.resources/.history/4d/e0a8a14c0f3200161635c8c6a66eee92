@@ -1,0 +1,338 @@
+package model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.util.List;
+
+
+/**
+ * The persistent class for the "Team" database table.
+ * 
+ */
+@Entity
+@Table(name="\"Team\"")
+@NamedQuery(name="Team.findAll", query="SELECT t FROM Team t")
+public class Team implements Serializable, DataBaseModel {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer id;
+
+	private Integer difference;
+
+	private Integer matches;
+
+	private Integer missing;
+
+	private String name;
+
+	private Integer points;
+
+	private Integer scored;
+
+	@Column(name="status_fifa")
+	private Integer statusFifa;
+
+	//bi-directional many-to-one association to Game
+	@OneToMany(mappedBy="team1Bean")
+	private List<Game> games1;
+
+	//bi-directional many-to-one association to Game
+	@OneToMany(mappedBy="team2Bean")
+	private List<Game> games2;
+
+	//bi-directional many-to-one association to Game
+	@OneToMany(mappedBy="team3")
+	private List<Game> games3;
+
+	//bi-directional many-to-one association to Group
+	@OneToMany(mappedBy="team1Bean")
+	private List<Group> groups1;
+
+	//bi-directional many-to-one association to Group
+	@OneToMany(mappedBy="team2Bean")
+	private List<Group> groups2;
+
+	//bi-directional many-to-one association to Group
+	@OneToMany(mappedBy="team3Bean")
+	private List<Group> groups3;
+
+	//bi-directional many-to-one association to Group
+	@OneToMany(mappedBy="team4Bean")
+	private List<Group> groups4;
+
+	//bi-directional many-to-one association to Player
+	@OneToMany(mappedBy="team")
+	private List<Player> players;
+
+	//bi-directional many-to-one association to Coach
+	@ManyToOne
+	@JoinColumn(name="coach_code")
+	private Coach coach;
+
+	//bi-directional many-to-one association to Group
+	@ManyToOne
+	@JoinColumn(name="group_code")
+	private Group group;
+
+	public Team() {
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getDifference() {
+		return this.difference;
+	}
+
+	public void setDifference(Integer difference) {
+		this.difference = difference;
+	}
+
+	public Integer getMatches() {
+		return this.matches;
+	}
+
+	public void setMatches(Integer matches) {
+		this.matches = matches;
+	}
+
+	public Integer getMissing() {
+		return this.missing;
+	}
+
+	public void setMissing(Integer missing) {
+		this.missing = missing;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Integer getPoints() {
+		return this.points;
+	}
+
+	public void setPoints(Integer points) {
+		this.points = points;
+	}
+
+	public Integer getScored() {
+		return this.scored;
+	}
+
+	public void setScored(Integer scored) {
+		this.scored = scored;
+	}
+
+	public Integer getStatusFifa() {
+		return this.statusFifa;
+	}
+
+	public void setStatusFifa(Integer statusFifa) {
+		this.statusFifa = statusFifa;
+	}
+
+	public List<Game> getGames1() {
+		return this.games1;
+	}
+
+	public void setGames1(List<Game> games1) {
+		this.games1 = games1;
+	}
+
+	public Game addGames1(Game games1) {
+		getGames1().add(games1);
+		games1.setTeam1Bean(this);
+
+		return games1;
+	}
+
+	public Game removeGames1(Game games1) {
+		getGames1().remove(games1);
+		games1.setTeam1Bean(null);
+
+		return games1;
+	}
+
+	public List<Game> getGames2() {
+		return this.games2;
+	}
+
+	public void setGames2(List<Game> games2) {
+		this.games2 = games2;
+	}
+
+	public Game addGames2(Game games2) {
+		getGames2().add(games2);
+		games2.setTeam2Bean(this);
+
+		return games2;
+	}
+
+	public Game removeGames2(Game games2) {
+		getGames2().remove(games2);
+		games2.setTeam2Bean(null);
+
+		return games2;
+	}
+
+	public List<Game> getGames3() {
+		return this.games3;
+	}
+
+	public void setGames3(List<Game> games3) {
+		this.games3 = games3;
+	}
+
+	public Game addGames3(Game games3) {
+		getGames3().add(games3);
+		games3.setTeam3(this);
+
+		return games3;
+	}
+
+	public Game removeGames3(Game games3) {
+		getGames3().remove(games3);
+		games3.setTeam3(null);
+
+		return games3;
+	}
+
+	public List<Group> getGroups1() {
+		return this.groups1;
+	}
+
+	public void setGroups1(List<Group> groups1) {
+		this.groups1 = groups1;
+	}
+
+	public Group addGroups1(Group groups1) {
+		getGroups1().add(groups1);
+		groups1.setTeam1Bean(this);
+
+		return groups1;
+	}
+
+	public Group removeGroups1(Group groups1) {
+		getGroups1().remove(groups1);
+		groups1.setTeam1Bean(null);
+
+		return groups1;
+	}
+
+	public List<Group> getGroups2() {
+		return this.groups2;
+	}
+
+	public void setGroups2(List<Group> groups2) {
+		this.groups2 = groups2;
+	}
+
+	public Group addGroups2(Group groups2) {
+		getGroups2().add(groups2);
+		groups2.setTeam2Bean(this);
+
+		return groups2;
+	}
+
+	public Group removeGroups2(Group groups2) {
+		getGroups2().remove(groups2);
+		groups2.setTeam2Bean(null);
+
+		return groups2;
+	}
+
+	public List<Group> getGroups3() {
+		return this.groups3;
+	}
+
+	public void setGroups3(List<Group> groups3) {
+		this.groups3 = groups3;
+	}
+
+	public Group addGroups3(Group groups3) {
+		getGroups3().add(groups3);
+		groups3.setTeam3Bean(this);
+
+		return groups3;
+	}
+
+	public Group removeGroups3(Group groups3) {
+		getGroups3().remove(groups3);
+		groups3.setTeam3Bean(null);
+
+		return groups3;
+	}
+
+	public List<Group> getGroups4() {
+		return this.groups4;
+	}
+
+	public void setGroups4(List<Group> groups4) {
+		this.groups4 = groups4;
+	}
+
+	public Group addGroups4(Group groups4) {
+		getGroups4().add(groups4);
+		groups4.setTeam4Bean(this);
+
+		return groups4;
+	}
+
+	public Group removeGroups4(Group groups4) {
+		getGroups4().remove(groups4);
+		groups4.setTeam4Bean(null);
+
+		return groups4;
+	}
+
+	public List<Player> getPlayers() {
+		return this.players;
+	}
+
+	public void setPlayers(List<Player> players) {
+		this.players = players;
+	}
+
+	public Player addPlayer(Player player) {
+		getPlayers().add(player);
+		player.setTeam(this);
+
+		return player;
+	}
+
+	public Player removePlayer(Player player) {
+		getPlayers().remove(player);
+		player.setTeam(null);
+
+		return player;
+	}
+
+	public Coach getCoach() {
+		return this.coach;
+	}
+
+	public void setCoach(Coach coach) {
+		this.coach = coach;
+	}
+
+	public Group getGroup() {
+		return this.group;
+	}
+
+	public void setGroup(Group group) {
+		this.group = group;
+	}
+
+}
