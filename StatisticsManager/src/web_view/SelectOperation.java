@@ -30,39 +30,40 @@ public class SelectOperation extends HttpServlet {
 		operation = Integer.parseInt(request.getParameter("operation"));
 		String tableClassName = SelectTable.tableName;
 		String formName = "";
-		if(operation == 4){
-			formName = "getId.html";
+		if(operation == 1){
+			formName = "generalTable.html";
+		}else if(operation == 2){
+			formName = "frameTeam.html";
+		}else if(operation == 3){
+			formName = "framePlayer.html";
+		}else if(operation == 5){
+			 formName = "getId.html";
 		}else if(tableClassName.equals("model.Coach")){
-			if(operation == 1){
+			if(operation == 4){
 				formName = "inputCoach.html";
-			}else if(operation == 2){
+			}else if(operation == 6){
 				formName = "editCoach.html";
 			}
-		}else if(tableClassName.equals("model.Game")){
-			if(operation == 1){
-				formName = "inputGame.html";
-			}else if(operation == 2){
-				formName = "editGame.html";
-			}
 		}else if(tableClassName.equals("model.Group")){
-			if(operation == 1){
-				formName = "inputGroup.html";
-			}else if(operation == 2){
+			if(operation == 4){
+				formName = "editGroup.html";
+			}else if(operation == 6){
 				formName = "editGroup.html";
 			}
 		}else if(tableClassName.equals("model.Player")){
-			if(operation == 1){
+			if(operation == 4){
 				formName = "inputPlayer.html";
-			}else if(operation == 2){
+			}else if(operation == 6){
 				formName = "editPlayer.html";
 			}
 		}else if(tableClassName.equals("model.Team")){
-			if(operation == 1){
-				formName = "inputTeam.html";
-			}else if(operation == 2){
+			if(operation == 4){
+				formName = "inputeTeam.html";
+			}else if(operation == 6){
 				formName = "editTeam.html";
 			}
 		}
+		request.getRequestDispatcher(formName).forward(request, response);
 	}
 
 	/**

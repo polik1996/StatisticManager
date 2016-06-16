@@ -22,19 +22,19 @@
 
 <body>
 <left>
-		<form action="SelectQuery" target="forTable" name="selectQuery"
+		<form action="SelectQuery" target="forOutputTeam" name="selectQuery"
 			method="POST">
 		<b>Запити до бази</b>
 		<p></p>
 		<select size = "1" name ="query" style="width:174Px;height:28px">
 		<table >
 		<tr>
-		<td><option value = "mostgoal">Группа</td>
-		<td><option value = "mostassist">Кількість матчів і очок</td>
-		<td><option value = "mostassist">Місце в рейтинзі</td>
+		<td><option value = "mostStatus">Топ у рейтинзі FIFA</td>
+		<td><option value = "mostPoint">Топ за кількістю набраних очок</td>
+		<td><option value = "mostScored">Топ за кількістю забитих голів</td>
+		<td><option value = "mostMissing">Топ за кількістю пропущених голів</td>
+		<td><option value = "mostDifference">Топ за різницею забитих/пропущених</td>
 		</select>
-		<td><input type="search" name="q" placeholder="Пошук по сайту" style="width:174Px;height:28px"
-						></td>
 		<td><input button class="btn btn-danger" type="submit" style="width:174Px;height:30px" 
 						value="Пошук "></td>
 						</tr>

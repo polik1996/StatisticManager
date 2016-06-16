@@ -1,0 +1,27 @@
+<%@page import="web_view.SelectTable"%>
+<%@page import="model.Team"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>teamList</title>
+</head>
+<body>
+	<center>
+		Студенти <select size="5" name="studId">
+			<%
+				Class<Student> c = Student.class;
+				for (Object x : SelectTable.getController().getObjectList(c)) {
+					Student obj = (Student) x;
+			%>
+			<option>
+				<%=obj.toString()%></option>
+			<%
+				}
+			%>
+		</select>
+	</center>
+</body>
+</html>

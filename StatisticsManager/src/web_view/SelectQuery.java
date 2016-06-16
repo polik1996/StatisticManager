@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import controller.JPAController;
+
 /**
  * Servlet implementation class SelectQuery
  */
@@ -26,8 +28,35 @@ public class SelectQuery extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		JPAController controller = SelectTable.getController();
+		String query = request.getParameter("query");
+		if (query.equals("mostGoal")) {
+			request.setAttribute("model", controller.getTableModelForQuery1());
+			request.setAttribute("tableName", "Найкращі бомбардири");
+		}else if (query.equals("mostAssist")) {
+			request.setAttribute("model", controller.getTableModelForQuery2());
+			request.setAttribute("tableName", "Найкращі асистенти");
+		}else if (query.equals("minsOnMatch")) {
+			request.setAttribute("model", controller.getTableModelForQuery3());
+			request.setAttribute("tableName", "Найбільший час на полі");
+		}else if (query.equals("mostStatus")) {
+			request.setAttribute("model", controller.getTableModelForQuery4());
+			request.setAttribute("tableName", "Топ у рейтинзі FIFA");
+		}else if (query.equals("mostPoint")) {
+			request.setAttribute("model", controller.getTableModelForQuery5());
+			request.setAttribute("tableName", "Топ за кількістю набраних очок");
+		}else if (query.equals("mostScored")) {
+			request.setAttribute("model", controller.getTableModelForQuery6());
+			request.setAttribute("tableName", "Топ за кількістю забитих голів");
+		}else if (query.equals("mostMissing")) {
+			request.setAttribute("model", controller.getTableModelForQuery7());
+			request.setAttribute("tableName", "Топ за кількістю пропущених голів");
+		}else if (query.equals("mostDifference")) {
+			request.setAttribute("model", controller.getTableModelForQuery8());
+			request.setAttribute("tableName", "Топ за різницею забитих/пропущених");
+		}		
+		request.getRequestDispatcher("showTable.jsp").forward(request, response);
+
 	}
 
 	/**

@@ -1,0 +1,101 @@
+package web_view;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import model.DataBaseModel;
+
+/**
+ * Servlet implementation class OperateTable
+ */
+@WebServlet("/OperateTable")
+public class OperateTable extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public OperateTable() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String className = SelectTable.tableName;
+		int operation = SelectOperation.operation;
+		DataBaseModel obj = null;
+		try{
+			obj = (DataBaseModel)Class.forName(className).newInstance();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		if(operation == 5){
+			String id = request.getParameter("id");
+			obj.setObjectId(Integer.parseInt(id));
+		}else if (obj instanceof Student) {
+			switch (operation) {
+			case 2:
+				int id = Integer.parseInt(request.getParameter("studentId"));
+				obj.setObjectId(id);
+			case 1:
+				String name = request.getParameter("studentName");
+				((Student) obj).setName(name);
+			}
+		} else if (obj instanceof Subject) {
+			switch (operation) {
+			case 2:
+				int id = Integer.parseInt(request.getParameter("subjectId"));
+				obj.setObjectId(id);
+			case 1:
+				String name = request.getParameter("subjectName");
+				((Subject) obj).setName(name);
+				String teacher = request.getParameter("subjectTeacher");
+				((Subject) obj).setTeacher(teacher);
+			}
+		} else if (obj instanceof Mark) {
+			int mark = Integer.parseInt(request.getParameter("markValue"));
+			((Mark) obj).setMark(mark);
+			Date date = Date.valueOf(request.getParameter("markDate"));
+			((Mark) obj).setDate(date);
+			if (operation == 2) {
+				//Для оновлення потрібен Id
+				int id = Integer.parseInt(request.getParameter("markId"));
+				obj.setObjectId(id);
+			} else if (operation == 1) {
+				//Для створення нового запису потрібні студент та предмет
+				int subjId = Integer.parseInt(request.getParameter("subjId"));
+				Subject sabj = (Subject) findObject(Subject.class, subjId);
+				((Mark) obj).setSubject(sabj);
+				int studId = Integer.parseInt(request.getParameter("studId"));
+				Student stud = (Student) findObject(Student.class, studId);
+				((Mark) obj).setStudent(stud);
+			}
+
+		}
+		SelectTable.getController().operateObject(obj, SelectOperation.operation);
+		request.setAttribute("model", SelectTable.getTableModel());
+		request.setAttribute("tableName", SelectTable.tableName);
+		request.getRequestDispatcher("showTable.jsp").forward(request, response);
+
+	}
+
+	private DataBaseModel findObject(Class clazz, int id){
+		return null;
+	}
+	
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

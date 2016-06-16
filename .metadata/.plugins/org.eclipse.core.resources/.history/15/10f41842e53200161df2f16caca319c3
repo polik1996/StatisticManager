@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+ <style>
+   body { 
+   font-style: italic;
+    margin: 20px; /* Убираем отступы */
+   }
+  </style>
+</head>
+<body>
+	<form action="OperateTable" target="forTable" method="POST">
+		<table width = "80">
+		<tr>	
+		<td>
+			Група
+		</td>
+		</tr>
+		<tr>
+			<iframe name="teamList1" src="teamList1.jsp" width="180" height="200"
+			frameborder="0"></iframe>
+		</tr>
+		<tr>	
+		<td>
+			Id <input type="text" name="id">
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Name <input type="text" name="name">
+		</td>
+		</tr>
+</table>
+<br>
+<input type="submit" button class="btn btn-info" style = width:140px value="Зберегти">
+	</form>
+</body>
+</html>
+</body>
+</html>

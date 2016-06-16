@@ -16,6 +16,11 @@ import java.util.List;
 @Table(name="\"Team\"")
 @NamedQuery(name="Team.findAll", query="SELECT t FROM Team t")
 public class Team implements Serializable, DataBaseModel {
+	@Override
+	public String toString() {
+		return name;
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	@Id

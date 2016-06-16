@@ -13,6 +13,11 @@ import java.util.List;
 @Table(name="\"Group\"")
 @NamedQuery(name="Group.findAll", query="SELECT g FROM Group g")
 public class Group implements Serializable, DataBaseModel {
+	@Override
+	public String toString() {
+		return name;
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	@Id

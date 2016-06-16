@@ -1,0 +1,78 @@
+package web_view;
+
+import java.io.IOException;
+import java.sql.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import javafx.scene.chart.XYChart.Data;
+import model.Coach;
+import model.DataBaseModel;
+
+/**
+ * Servlet implementation class OperateTable
+ */
+@WebServlet("/OperateTable")
+public class OperateTable extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public OperateTable() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String className = SelectTable.tableName;
+		int operation = SelectOperation.operation;
+		DataBaseModel obj = null;
+		try{
+			obj = (DataBaseModel)Class.forName(className).newInstance();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		if(operation == 5){
+			String id = request.getParameter("id");
+			obj.setObjectId(Integer.parseInt(id));
+		}else if (obj instanceof Coach) {
+			switch (operation) {
+			case 4:
+				int id = Integer.parseInt(request.getParameter("id"));
+				obj.setObjectId(id);
+			case 6:
+				int id1 = Integer.parseInt(request.getParameter("id"));
+				((Coach)obj).setId(id1);
+				String name = request.getParameter("name");
+				((Coach)obj).setName(name);
+				String nationality = request.getParameter("nationality");
+				((Coach)obj).setNationality(nationality);
+				Date age = Date.valueOf(request.getParameter("age"));
+				((Coach)obj).setAge(age);
+				String tact_1 = request.getParameter("tactics_1");
+				((Coach)obj).setTactics1(tact_1);
+				}
+		}
+	}
+
+	private DataBaseModel findObject(Class clazz, int id){
+		return null;
+	}
+	
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

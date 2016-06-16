@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>football.ua</title>
+<head> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+   <style>
+   body{
+    background-color: #e6e6e6; /* Цвет фона веб-страницы */
+	margin:0px;
+	padding:30px;
+	padding-top:0px;
+	
+   } 
+   </style>
+
+</head>
+</head>
+<body>
+	<center>
+		<h3><p> Система футбольної аналітики</p></h3>
+		<p><img src="euro.png" width="1205" height="100" alt = "euro 2016" ></p>
+		<div><iframe name="forMenu" src="menuTable.html" width="205" height="400" align =left  ></iframe>
+		<div><iframe name="forTableSelect" src="menuMain.html" width="998" height="50" align =top > </iframe>
+		<div><iframe name="forTable" width="998" height="350" > </iframe>
+		<div><iframe name="forGroup"   width="1205" height="300"> </iframe>
+		</div>
+		</div>
+		</div>
+		</div>
+	</center>
+</body>
+</html>

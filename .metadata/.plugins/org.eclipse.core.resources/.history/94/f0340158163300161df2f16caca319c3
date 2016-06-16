@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>football.ua</title>
+<head> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+   <style>
+   body{
+    background-color: #e6e6e6; /* Цвет фона веб-страницы */
+	margin:0px;
+	padding:30px;
+	padding-top:0px;
+	
+   } 
+   </style>
+
+</head>
+</head>
+<body>
+	<center>
+		<div><iframe name="forChooseQuery" width="995" height="145" align =top  ></iframe>
+		<div><iframe name="forOutputQuery" width="998" height="245" align =top > </iframe>
+		</div>
+		</div>
+	</center>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+ <style>
+   body { 
+   font-style: italic;
+    margin: 20px; /* Убираем отступы */
+   }
+  </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="OperateTable" target="forTable" method="POST">
+		<table width = "80">
+		<tr>	
+		<td>
+			Group
+		</td>
+		</tr>
+		<tr>	
+		<td>
+			Id <input type="text" name="id">
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Name <input type="text" name="name">
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Team 1  <input type="text" name="team_1">
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Team 2  <input type="text" name="team_2">
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Team 3  <input type="text" name="team_3">
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Team 4 <input type="text" name="team_4">
+		</td>
+		</tr>
+</table>
+<br>
+<input type="submit" button class="btn btn-info" style = width:140px value="Зберегти">
+	</form>
+</body>
+</html>
+</body>
+</html>

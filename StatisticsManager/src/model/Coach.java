@@ -14,14 +14,16 @@ import java.util.List;
 @Table(name="\"Coach\"")
 @NamedQuery(name="Coach.findAll", query="SELECT c FROM Coach c")
 public class Coach implements Serializable, DataBaseModel {
+	@Override
+	public String toString() {
+		return name;
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
-
-	@Temporal(TemporalType.DATE)
-	private Date age;
 
 	private String name;
 
@@ -46,14 +48,6 @@ public class Coach implements Serializable, DataBaseModel {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public Date getAge() {
-		return this.age;
-	}
-
-	public void setAge(Date age) {
-		this.age = age;
 	}
 
 	public String getName() {
@@ -112,12 +106,12 @@ public class Coach implements Serializable, DataBaseModel {
 
 	@Override
 	public String[] getTableHeaders() {
-		return new String[]{"Ім'я", "Національність", "Дата народження", "Тактика 1", "Тактика 2", "id"};
+		return new String[]{"Ім'я", "Національність", "Тактика 1", "Тактика 2", "id"};
 	}
 
 	@Override
 	public Object[] getTableRowData() {
-		return new Object[]{name, nationality, age, tactics1, tactics2, id};
+		return new Object[]{name, nationality, tactics1, tactics2, id};
 	}
 
 	@Override
@@ -135,7 +129,6 @@ public class Coach implements Serializable, DataBaseModel {
 		Coach obj = (Coach)mask;
 		name = obj.getName();
 		nationality = obj.getNationality();
-		age = obj.getAge();
 		tactics1 = obj.getTactics1();
 		tactics2 = obj.getTactics2();
 	}

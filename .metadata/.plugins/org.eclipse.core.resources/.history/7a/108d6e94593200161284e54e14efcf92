@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+ <style>
+   body { 
+   font-style: italic;
+    margin: 20px; /* Убираем отступы */
+   }
+  </style>
+</head>
+<body>
+	<form action="OperateTable" target="forTable" method="POST">
+		<table width = "80">
+		<tr>	
+		<td>
+			Coach 
+		</td>
+		</tr>
+		<tr>	
+		<td>
+			Id <input type="text" name="id">
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Name <input type="text" name="name">
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Nationality  <input type="text" name="nationality">
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Age  <input type="text" name="age">
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Tactics 1 <input type="text" name="tactics_1">
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Tactics 2  <input type="text" name="tactics_2">
+		</td>
+		</tr>
+		
+</table>
+<br>
+<input type="submit" button class="btn btn-info" style = width:140px value="add">
+	</form>
+
+</body>
+</html>
+</body>
+</html>

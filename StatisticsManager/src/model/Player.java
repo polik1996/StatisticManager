@@ -13,6 +13,11 @@ import java.util.Date;
 @Table(name="\"Player\"")
 @NamedQuery(name="Player.findAll", query="SELECT p FROM Player p")
 public class Player implements Serializable, DataBaseModel {
+	@Override
+	public String toString() {
+		return name;
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	@Id

@@ -14,19 +14,22 @@
   </style>
 </head>
 <body>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
 	<form action="OperateTable" target="forTable" method="POST">
 		<table width = "80">
 		<tr>	
 		<td>
-			Group
+			Група
 		</td>
+		</tr>
+		<tr>
+			<td><iframe name="teamList1" src="teamList1.jsp" width="180" height="200"
+			frameborder="0"></iframe></td>
+			<td><iframe name="teamList2" src="teamList2.jsp" width="180" height="200"
+			frameborder="0"> </iframe></td>
+			<td><iframe name="teamList3" src="teamList3.jsp" width="180" height="200"
+			frameborder="0"> </iframe></td>
+			<td><iframe name="teamList4" src="teamList4.jsp" width="180" height="200"
+			frameborder="0"> </iframe></td>	
 		</tr>
 		<tr>	
 		<td>
@@ -38,29 +41,9 @@
 			Name <input type="text" name="name">
 		</td>
 		</tr>
-		<tr>
-		<td>
-			Team 1  <input type="text" name="team_1">
-		</td>
-		</tr>
-		<tr>
-		<td>
-			Team 2  <input type="text" name="team_2">
-		</td>
-		</tr>
-		<tr>
-		<td>
-			Team 3  <input type="text" name="team_3">
-		</td>
-		</tr>
-		<tr>
-		<td>
-			Team 4 <input type="text" name="team_4">
-		</td>
-		</tr>
 </table>
 <br>
-<input type="submit" button class="btn btn-info" style = width:140px value="Add">
+<input type="submit" button class="btn btn-info" style = width:140px value="Зберегти">
 	</form>
 </body>
 </html>

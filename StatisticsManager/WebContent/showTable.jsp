@@ -6,6 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>showTable</title>
+<style type="text/css">
+</style>
 </head>
 <body>
 	<%
@@ -14,7 +16,7 @@
 	%>
 	<center>
 		<b> Таблиця <%=tableName%></b>
-		<table border="1">
+		<table border="1" width="150" >
 			<tr>
 				<%
 					int nCol = model.getColumnCount();

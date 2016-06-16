@@ -1,0 +1,224 @@
+package controller;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
+import model.DataBaseModel;
+import web_view.DataBaseDialog;
+
+public class JPAController {
+	
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("SupportProject");
+	
+	public java.util.List<? extends DataBaseModel> getObjectList(Class<? extends DataBaseModel> clazz){
+		EntityManager em = emf.createEntityManager();
+		String queryName = clazz.getSimpleName() + "." + "findAll";
+		@SuppressWarnings("unchecked")
+		java.util.List<DataBaseModel> list = em.createNamedQuery(queryName).getResultList();
+		em.close();
+		return list;
+	}
+	
+	public TableModel getTableModel(Class<? extends DataBaseModel> clazs){
+		List<? extends DataBaseModel> list = getObjectList(clazs);
+		if (list == null || list.size() == 0)
+			return null;
+		String[] header = list.get(0).getTableHeaders();
+		Object[][] array = new Object[list.size()][header.length];
+		int i = 0;
+		for (DataBaseModel s : list)
+			array[i++] = s.getTableRowData();
+		return new DefaultTableModel(array, header);
+	}
+	
+	public boolean ifExist(Class<? extends DataBaseModel> clazz, DataBaseModel obj){
+		List<? extends DataBaseModel> list = getObjectList(clazz);
+		if (list != null && list.size() != 0)
+			for (Object current : list)
+				if (current.equals(obj))
+					return true;
+		return false;
+	}
+	
+	public void operateObject(DataBaseModel obj, int mode){
+		Class<? extends DataBaseModel> clazz = obj.getClass();
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+		try {
+			
+			if(mode == DataBaseDialog.ADD && !ifExist(clazz, obj))
+				em.persist(obj);	
+			else if(mode == DataBaseDialog.UPDATE){
+				DataBaseModel updObj = (DataBaseModel) em.find(clazz, obj.getObjectId());
+				updObj.updateWith(obj);	
+			}
+			else if(mode == DataBaseDialog.DELETE){
+				int id = obj.getObjectId();
+				Object delObj = em.find(clazz, id);
+				em.remove(delObj);
+			}
+			em.getTransaction().commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			em.getTransaction().rollback();
+		} finally {
+			em.close();
+		}
+	}
+	
+	public TableModel getTableModelForQuery1() {
+		String q = "select \"name\", \"position\", \"goals\""
+				+ " from \"Player\" order by \"goals\" asc limit 10";
+		EntityManager em = emf.createEntityManager();
+		@SuppressWarnings("unchecked")
+		List<Object[]> list =(List<Object[]>)qr.getResultList();
+		 Object[][] arr = new Object[list.size()][3];
+		 int i=0;
+		for(Object[] x : list){
+			arr[i++] =  x;
+		}
+		DefaultTableModel model = new DefaultTableModel(arr, 
+				new String[] { "Team", "Player" });
+		return model;
+	}
+	
+	public TableModel getTableModelForQuery2() {
+		String q = "SELECT p.name, t.club.name " 
+				+ " FROM Player p, Team t"
+				+ " WHERE p.team.idTeam = ?1"
+				+ " ORDER BY 1 ";
+		EntityManager em = emf.createEntityManager();
+		Query qr = em.createQuery(q).setParameter(1, 43);
+		@SuppressWarnings("unchecked")
+		List<Object[]> list =(List<Object[]>)qr.getResultList();
+		 Object[][] arr = new Object[list.size()][3];
+		 int i=0;
+		for(Object[] x : list){
+			arr[i++] =  x;
+		}
+		DefaultTableModel model = new DefaultTableModel(arr, 
+				new String[] { "Team", "Player" });
+		return model;
+	}
+	
+	public TableModel getTableModelForQuery3() {
+		String q = "SELECT p.name, t.club.name " 
+				+ " FROM Player p, Team t"
+				+ " WHERE p.team.idTeam = ?1"
+				+ " ORDER BY 1 ";
+		EntityManager em = emf.createEntityManager();
+		Query qr = em.createQuery(q).setParameter(1, 43);
+		@SuppressWarnings("unchecked")
+		List<Object[]> list =(List<Object[]>)qr.getResultList();
+		 Object[][] arr = new Object[list.size()][3];
+		 int i=0;
+		for(Object[] x : list){
+			arr[i++] =  x;
+		}
+		DefaultTableModel model = new DefaultTableModel(arr, 
+				new String[] { "Team", "Player" });
+		return model;
+	}
+	
+	public TableModel getTableModelForQuery4() {
+		String q = "SELECT p.name, t.club.name " 
+				+ " FROM Player p, Team t"
+				+ " WHERE p.team.idTeam = ?1"
+				+ " ORDER BY 1 ";
+		EntityManager em = emf.createEntityManager();
+		Query qr = em.createQuery(q).setParameter(1, 43);
+		@SuppressWarnings("unchecked")
+		List<Object[]> list =(List<Object[]>)qr.getResultList();
+		 Object[][] arr = new Object[list.size()][3];
+		 int i=0;
+		for(Object[] x : list){
+			arr[i++] =  x;
+		}
+		DefaultTableModel model = new DefaultTableModel(arr, 
+				new String[] { "Team", "Player" });
+		return model;
+	}
+	
+	public TableModel getTableModelForQuery5() {
+		String q = "SELECT p.name, t.club.name " 
+				+ " FROM Player p, Team t"
+				+ " WHERE p.team.idTeam = ?1"
+				+ " ORDER BY 1 ";
+		EntityManager em = emf.createEntityManager();
+		Query qr = em.createQuery(q).setParameter(1, 43);
+		@SuppressWarnings("unchecked")
+		List<Object[]> list =(List<Object[]>)qr.getResultList();
+		 Object[][] arr = new Object[list.size()][3];
+		 int i=0;
+		for(Object[] x : list){
+			arr[i++] =  x;
+		}
+		DefaultTableModel model = new DefaultTableModel(arr, 
+				new String[] { "Team", "Player" });
+		return model;
+	}
+	
+	public TableModel getTableModelForQuery6() {
+		String q = "SELECT p.name, t.club.name " 
+				+ " FROM Player p, Team t"
+				+ " WHERE p.team.idTeam = ?1"
+				+ " ORDER BY 1 ";
+		EntityManager em = emf.createEntityManager();
+		Query qr = em.createQuery(q).setParameter(1, 43);
+		@SuppressWarnings("unchecked")
+		List<Object[]> list =(List<Object[]>)qr.getResultList();
+		 Object[][] arr = new Object[list.size()][3];
+		 int i=0;
+		for(Object[] x : list){
+			arr[i++] =  x;
+		}
+		DefaultTableModel model = new DefaultTableModel(arr, 
+				new String[] { "Team", "Player" });
+		return model;
+	}
+	
+	public TableModel getTableModelForQuery7() {
+		String q = "SELECT p.name, t.club.name " 
+				+ " FROM Player p, Team t"
+				+ " WHERE p.team.idTeam = ?1"
+				+ " ORDER BY 1 ";
+		EntityManager em = emf.createEntityManager();
+		Query qr = em.createQuery(q).setParameter(1, 43);
+		@SuppressWarnings("unchecked")
+		List<Object[]> list =(List<Object[]>)qr.getResultList();
+		 Object[][] arr = new Object[list.size()][3];
+		 int i=0;
+		for(Object[] x : list){
+			arr[i++] =  x;
+		}
+		DefaultTableModel model = new DefaultTableModel(arr, 
+				new String[] { "Team", "Player" });
+		return model;
+	}
+	
+	public TableModel getTableModelForQuery8() {
+		String q = "SELECT p.name, t.club.name " 
+				+ " FROM Player p, Team t"
+				+ " WHERE p.team.idTeam = ?1"
+				+ " ORDER BY 1 ";
+		EntityManager em = emf.createEntityManager();
+		Query qr = em.createQuery(q).setParameter(1, 43);
+		@SuppressWarnings("unchecked")
+		List<Object[]> list =(List<Object[]>)qr.getResultList();
+		 Object[][] arr = new Object[list.size()][3];
+		 int i=0;
+		for(Object[] x : list){
+			arr[i++] =  x;
+		}
+		DefaultTableModel model = new DefaultTableModel(arr, 
+				new String[] { "Team", "Player" });
+		return model;
+	}
+	
+}
