@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<head> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+     <style>
+   body{
+    background-color: #e6e6e6; /* Цвет фона веб-страницы */
+	border-width:20px;
+	padding:30px;
+	  font-style:italic;
+   } 
+   b{font-size:20px;
+   font-style:italic;
+   }
+   </style>
+</head>
+
+<body>
+<left>
+		<form action="SelectQuery" target="forOutputPlayer" name="selectQuery"
+			method="POST">
+		<b>Запити до бази</b>
+		<p></p>
+		<select size = "1" name ="query" style="width:174Px;height:28px">
+		<table >
+		<tr>
+		<td><option value = "mostGoal">Найкращі бомбардири</td>
+		<td><option value = "mostAssist">Найкращі асистенти</td>
+		<td><option value = "minsOnMatch">Найбільший час на полі</td>
+		</select>
+		<td><input button class="btn btn-danger" type="submit" style="width:174Px;height:30px" 
+						value="Пошук "></td>
+						</tr>
+						</table>
+		</form>
+</left>
+</body>
+</html>

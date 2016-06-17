@@ -154,4 +154,9 @@ public class Group implements Serializable, DataBaseModel {
 		team4Bean = obj.getTeam4Bean();
 	}
 
+	@Override
+	public String getObjectName() {
+		return name;
+	}
+
 }

@@ -24,9 +24,6 @@ public class Player implements Serializable, DataBaseModel {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
 
-	@Temporal(TemporalType.DATE)
-	private Date age;
-
 	private Integer asists;
 
 	private Integer goals;
@@ -55,14 +52,6 @@ public class Player implements Serializable, DataBaseModel {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public Date getAge() {
-		return this.age;
-	}
-
-	public void setAge(Date age) {
-		this.age = age;
 	}
 
 	public Integer getAsists() {
@@ -137,7 +126,7 @@ public class Player implements Serializable, DataBaseModel {
 
 	@Override
 	public Object[] getTableRowData() {
-		return new Object[]{id, name, team.getName(), age, matches, goals,
+		return new Object[]{id, name, team.getName(), matches, goals,
 				asists, minutes, position, number};
 	}
 
@@ -156,13 +145,17 @@ public class Player implements Serializable, DataBaseModel {
 		Player obj = (Player)mask;
 		name = obj.getName();
 		team = obj.getTeam();
-		age = obj.getAge();
 		matches = obj.getMatches();
 		goals = obj.getGoals();
 		asists = obj.getAsists();
 		minutes = obj.getMinutes();
 		position = obj.getPosition();
 		number = obj.getNumber();
+	}
+
+	@Override
+	public String getObjectName() {
+		return name;
 	}
 
 }

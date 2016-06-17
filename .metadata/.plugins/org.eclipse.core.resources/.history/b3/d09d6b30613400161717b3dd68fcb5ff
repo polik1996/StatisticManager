@@ -1,0 +1,75 @@
+<%@page import="web_view.SelectTable"%>
+<%@page import="model.Team"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>teamList1</title>
+</head>
+<body>
+	<form action="OperateTable" target="forTable" method="POST">
+				<select size="1" name="team1Bean">
+			<%
+				Class<Team> c1 = Team.class;
+				for (Object x : SelectTable.getController().getObjectList(c1)) {
+					Team obj = (Team) x;
+					String s1 = obj.toString();
+			%>
+			<option value=s1>
+				<%=s1%></option>
+			<%
+				}
+			%>
+		</select>
+				<select size="1" name="team2Bean">
+			<%
+				Class<Team> c2 = Team.class;
+				for (Object x : SelectTable.getController().getObjectList(c2)) {
+					Team obj = (Team) x;
+					String s2 = obj.toString();
+			%>
+			<option value=s2>
+				<%=s2%></option>
+			<%
+				}
+			%>
+		</select>
+				<select size="1" name="team3Bean">
+			<%
+				Class<Team> c3 = Team.class;
+				for (Object x : SelectTable.getController().getObjectList(c3)) {
+					Team obj = (Team) x;
+					String s3 = obj.toString();
+			%>
+			<option value=s3>
+				<%=s3%></option>
+			<%
+				}
+			%>
+		</select>
+				<select size="1" name="team4Bean">
+			<%
+				Class<Team> c4 = Team.class;
+				for (Object x : SelectTable.getController().getObjectList(c4)) {
+					Team obj = (Team) x;
+					String s4 = obj.toString();
+			%>
+			<option value=s4>
+				<%=s4%></option>
+			<%
+				}
+			%>
+		</select>
+		
+
+			<p>Група</p><br>
+			<p>Id </p><input type="text" name="id"><br>
+			<p>Name </p><input type="text" name="name">
+
+<br>
+<input type="submit" button class="btn btn-info" style = width:140px value="Зберегти">
+	</form>	
+</body>
+</html>

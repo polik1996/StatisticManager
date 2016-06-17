@@ -133,4 +133,9 @@ public class Coach implements Serializable, DataBaseModel {
 		tactics2 = obj.getTactics2();
 	}
 
+	@Override
+	public String getObjectName() {
+		return name;
+	}
+
 }

@@ -1,0 +1,114 @@
+package web_view;
+
+import java.io.IOException;
+import java.sql.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import javafx.scene.chart.XYChart.Data;
+import model.Coach;
+import model.DataBaseModel;
+import model.Group;
+import model.Player;
+import model.Team;
+
+/**
+ * Servlet implementation class OperateTable
+ */
+@WebServlet("/OperateTable")
+public class OperateTable extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public OperateTable() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String className = SelectTable.tableName;
+		int operation = SelectOperation.operation;
+		DataBaseModel obj = null;
+		try{
+			obj = (DataBaseModel)Class.forName(className).newInstance();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		if(operation == 5){
+			String id = request.getParameter("id");
+			obj.setObjectId(Integer.parseInt(id));
+		}else if (obj instanceof Coach) {
+			switch (operation) {
+			case 4:
+				int id = Integer.parseInt(request.getParameter("id"));
+				obj.setObjectId(id);
+			case 6:
+				int id1 = Integer.parseInt(request.getParameter("id"));
+				((Coach)obj).setId(id1);
+				String name = request.getParameter("name");
+				((Coach)obj).setName(name);
+				String nationality = request.getParameter("nationality");
+				((Coach)obj).setNationality(nationality);
+				String tact_1 = request.getParameter("tactics_1");
+				((Coach)obj).setTactics1(tact_1);
+				String tact_2 = request.getParameter("tactics_2");
+				((Coach)obj).setTactics2(tact_2);
+				}
+		}else if (obj instanceof Group) {
+			switch (operation) {
+			case 4:
+				int id = Integer.parseInt(request.getParameter("id"));
+				obj.setObjectId(id);
+			case 6:
+				int id1 = Integer.parseInt(request.getParameter("id"));
+				((Group)obj).setId(id1);
+				String name = request.getParameter("name");
+				((Group)obj).setName(name);
+				int t1 = Integer.parseInt(request.getParameter("team1Bean"));
+				Team team1 = ((Team)findObject(Team.class, t1));
+				((Group)obj).setTeam1Bean(team1);
+				int t2 = Integer.parseInt(request.getParameter("team2Bean"));
+				Team team2 = (Team)findObject(Team.class, t2);
+				((Group)obj).setTeam2Bean(team2);
+				int t3 = Integer.parseInt(request.getParameter("team3Bean").toString());
+				Team team3 = (Team)findObject(Team.class, t3);
+				((Group)obj).setTeam3Bean(team3);
+				int t4 = Integer.parseInt(request.getParameter("team4Bean").toString());
+				Team team4 = (Team)findObject(Team.class, t4);
+				((Group)obj).setTeam4Bean(team4);
+				}
+		}
+		SelectTable.getController().operateObject(obj, SelectOperation.operation);
+		request.setAttribute("model", SelectTable.getTableModel());
+		request.setAttribute("tableName", SelectTable.tableName);
+		request.getRequestDispatcher("showTable.jsp").forward(request, response);
+	}
+
+	private DataBaseModel findObject(Class clazz, int id){
+		DataBaseModel obj = null;
+		for (Object x : SelectTable.getController().getObjectList(clazz)) {
+			obj = (DataBaseModel) x;
+			if (obj.getObjectId() == id)
+				return obj;
+		}
+		return null;
+	}
+	
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

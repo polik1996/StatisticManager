@@ -30,9 +30,7 @@ public class SelectOperation extends HttpServlet {
 		operation = Integer.parseInt(request.getParameter("operation"));
 		String tableClassName = SelectTable.tableName;
 		String formName = "";
-		if(operation == 1){
-			formName = "generalTable.html";
-		}else if(operation == 2){
+		if(operation == 2){
 			formName = "frameTeam.html";
 		}else if(operation == 3){
 			formName = "framePlayer.html";
@@ -46,15 +44,15 @@ public class SelectOperation extends HttpServlet {
 			}
 		}else if(tableClassName.equals("model.Group")){
 			if(operation == 4){
-				formName = "editGroup.html";
+				formName = "inputGroup.jsp";
 			}else if(operation == 6){
-				formName = "editGroup.html";
+				formName = "inputGroup.jsp";
 			}
 		}else if(tableClassName.equals("model.Player")){
 			if(operation == 4){
-				formName = "inputPlayer.html";
+				formName = "inputPlayer.jsp";
 			}else if(operation == 6){
-				formName = "editPlayer.html";
+				formName = "inputGroup.jsp";
 			}
 		}else if(tableClassName.equals("model.Team")){
 			if(operation == 4){

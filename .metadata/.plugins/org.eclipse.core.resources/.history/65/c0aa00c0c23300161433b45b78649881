@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<head> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+     <style>
+   body{
+    background-color: #e6e6e6; /* Цвет фона веб-страницы */
+	margin:0px;
+	border-width:20px;
+	padding-top:0px;
+	padding:0px;
+   } 
+   </style>
+</head>
+
+<body>
+<left>
+		<form action="SelectOperation" target="forTable" name="selectOperation"
+			method="POST">
+			<table width="80">
+				<tr>
+					<td align="left"><button value="1" button class="btn btn-info" type="submit" style="width:200Px" 
+					name="operation">Групи</button></td>
+				</tr>
+		</form>
+		<form action="SelectOperation" target="forTable" name="selectOperation"
+			method="POST">
+			<table width="80">
+				<tr>
+					<td align="left"><button value="1" button class="btn btn-info" type="submit" style="width:200Px" 
+					name="operation">Групи</button></td>
+				</tr>
+				<tr>
+					<td align="left"><button value="2" button class="btn btn-info" type="submit" style="width:200Px" 
+					name="operation" >Пошук інфи про команди</button></td>
+				<tr>
+					<td align="left"><button value="3" button class="btn btn-info" type="submit" style="width:200Px" 
+					name="operation">Пошук інфи про гравців</button></td>
+				</tr>
+				<tr>
+					<td align="left"><button value="4" button class="btn btn-info" type="submit" style="width:200Px" 
+					name="operation">Додати дані</button></td>
+				</tr>
+				<tr>
+					<td align="left"><button value="5" button class="btn btn-info" type="submit" style="width:200Px" 
+					name="operation">Видалити дані</button></td>
+				</tr>
+				<tr>
+					<td align="left"><button value="6" button class="btn btn-info" type="submit" style="width:200Px" 
+					name="operation">Змінити дані</button></td>
+				</tr>
+			</table>
+			<p></p>
+			<img src="./talisman.PNG" width="200" height="180" alt = "SUPER VICTOR" >
+		</form>
+</left>
+</body>
+</html>

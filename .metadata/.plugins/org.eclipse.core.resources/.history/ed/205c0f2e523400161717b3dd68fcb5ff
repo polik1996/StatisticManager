@@ -1,0 +1,88 @@
+<%@page import="web_view.SelectGroup"%>
+<%@page import="model.Group"%>
+<%@ page import="javax.swing.table.TableModel" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>showTable</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+<style type="text/css">
+</style>
+</head>
+<body>
+	<%
+		String tableName = (String)request.getAttribute("tableName");
+		TableModel model = (TableModel) request.getAttribute("model");
+	%>
+	<center>
+				<%
+					int nRow = model.getRowCount();
+					int nCol = model.getColumnCount();
+					for(int i = 0; i < nRow; i++){
+						String h = model.getValueAt(i, 1).toString();
+				%>
+		<table class="table" border="1" width="150" >
+			<tr class="warning">
+				<th class ="active" width="100%"><%=h%></th>
+				<th class ="active" width="100%"><%="очк."%></th>
+				<th class ="active" width="100%"><%="заб."%></th>
+				<th class ="active" width="100%"><%="проп."%></th>
+				<th class ="active" width="100%"><%="різн."%></th>
+			</tr>
+				<%
+					Class<Group> g = Group.class;
+					for(int j = 0; j < nRow; j++){
+						Object x = SelectGroup.getController().getObjectList(g);
+						Group obj = (Group)x;
+				%>
+				<tr>
+					<th class ="active" width="100%"><%=obj.getTeam1Bean().getName()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam1Bean().getPoints()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam1Bean().getScored()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam1Bean().getMissing()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam1Bean().getDifference()%></th>
+				</tr>
+				<tr>
+					<th class ="active" width="100%"><%=obj.getTeam2Bean().getName()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam2Bean().getPoints()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam2Bean().getScored()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam2Bean().getMissing()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam2Bean().getDifference()%></th>
+				</tr>
+				<tr>
+					<th class ="active" width="100%"><%=obj.getTeam3Bean().getName()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam3Bean().getPoints()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam3Bean().getScored()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam3Bean().getMissing()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam3Bean().getDifference()%></th>
+				</tr>
+				<tr>
+					<th class ="active" width="100%"><%=obj.getTeam4Bean().getName()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam4Bean().getPoints()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam4Bean().getScored()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam4Bean().getMissing()%></th>
+					<th class ="active" width="100%"><%=obj.getTeam4Bean().getDifference()%></th>
+				</tr>
+				<%
+					}
+				%>
+				<%	}	%>
+			<%
+				Class<Team> c = Team.class;
+				for (Object x : SelectTable.getController().getObjectList(c)) {
+					Team obj = (Team) x;
+			%>
+			<option>
+				<%=obj.toString()%></option>
+			<%
+				}
+			%>
+		</table>
+	</center>
+</body>
+</html>

@@ -120,4 +120,9 @@ public class Game implements Serializable, DataBaseModel {
 		date = obj.getDate();
 	}
 
+	@Override
+	public String getObjectName() {
+		return null;
+	}
+
 }

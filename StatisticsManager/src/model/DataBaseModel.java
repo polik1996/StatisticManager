@@ -7,5 +7,6 @@ public interface DataBaseModel {
 	int getObjectId();
 	void setObjectId(int id);
 	void updateWith(Object mask);
+	String getObjectName();
 	
 }
